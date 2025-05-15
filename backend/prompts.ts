@@ -1,0 +1,1 @@
+export const systemPrompt = `You are a helpful coding assistant. Provide clear code examples and concise explanations.`;
