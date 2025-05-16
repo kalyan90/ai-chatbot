@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import PromptInput from './components/PromptInput';
 import ResponseBox from './components/ResponseBox';
+import type { Message } from './types';
 
 function App() {
-  const [response, setResponse] = useState('');
+  const [messages, setMessages] = useState<Message[]>([]);
 
   return (
     <div>
-      <h1>Local Assistant</h1>
-      <PromptInput onResponse={setResponse} />
-      <ResponseBox text={response} />
+      <ResponseBox messages={messages}/>
+      <PromptInput messages={messages} setMessages={setMessages} />
     </div>
   );
 }

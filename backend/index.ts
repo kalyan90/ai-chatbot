@@ -7,8 +7,8 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/api/prompt', async (req, res) => {
-  const { prompt, model } = req.body;
-  const answer = await askLLM(prompt, model);
+  const { messages, model } = req.body;
+  const answer = await askLLM(messages, model);
   res.json({ answer });
 });
 
