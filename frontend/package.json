@@ -11,10 +11,12 @@
     "start": "node backend/index"
   },
   "dependencies": {
+    "axios": "latest",
     "node-fetch": "^3.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "axios": "latest"
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
